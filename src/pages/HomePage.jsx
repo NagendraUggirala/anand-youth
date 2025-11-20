@@ -401,7 +401,7 @@ const Home = () => {
               <div className="w-16 md:w-20 h-1  mx-auto mb-4 md:mb-6"></div>
               <p className="text-base md:text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed px-2">
                 Established with a vision to redefine real estate through ethical practices and uncompromised quality, 
-                Anand Realtyy has been creating dream spaces for over 15 years. We believe that everyone deserves a home 
+                Anand Realtyy has been creating dream spaces for over 27 years. We believe that everyone deserves a home 
                 that embodies trust, quality, and lasting value - from first-time homebuyers to seasoned investors.
               </p>
             </motion.div>
@@ -472,7 +472,7 @@ const Home = () => {
               The Anand Realtyy Advantage
             </h2>
             <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed px-2">
-              Experience the difference that comes with 15+ years of trusted real estate development
+              Experience the difference that comes with 27+ years of trusted real estate development
             </p>
           </motion.div>
 

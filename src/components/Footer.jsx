@@ -338,7 +338,7 @@ const Footer = () => {
               {/* Developer Credit */}
               <div className="text-center md:text-right">
                 <p className="text-gray-500 text-sm">
-                  developed by{" "}
+                  Designed by{" "}
                   <Link to="https://designcareermetrics.com" className="text-orange-400 hover:underline font-medium">
                     Design Career Metrics
                   </Link>

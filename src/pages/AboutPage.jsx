@@ -11,10 +11,10 @@ const About = () => {
   const isInView3 = useInView(ref3, { once: true, threshold: 0.3 });
 
   const milestones = [
-    { year: "2008", title: "Foundation", description: "Anand Realtyy established with vision of ethical real estate" },
-    { year: "2012", title: "Expansion", description: "Diversified into infrastructure and cinema production" },
-    { year: "2018", title: "Consolidation", description: "Unified all verticals under Anand Realtyy brand" },
-    { year: "2023", title: "Innovation", description: "Launched future-ready real estate solutions" }
+    { year: "1998", title: "Foundation", description: "Anand Realtyy established with vision of ethical real estate" },
+    { year: "2005", title: "Expansion", description: "Diversified into infrastructure and cinema production" },
+    { year: "2014", title: "Consolidation", description: "Unified all verticals under Anand Realtyy brand" },
+    { year: "2025", title: "Innovation", description: "Launched future-ready real estate solutions" }
   ];
 
   const values = [
@@ -243,7 +243,7 @@ const About = () => {
                   <div className="mt-4 md:mt-6 text-gray-700 space-y-4 w-full">
                     <p className="text-sm sm:text-base md:text-lg leading-relaxed">
                       A visionary leader with an unwavering commitment to excellence, Anand founded
-                      Anand Realtyy in 1995 with a simple yet powerful vision: to create sustainable
+                      Anand Realtyy in 1998 with a simple yet powerful vision: to create sustainable
                       businesses that transform communities and inspire generations.
                     </p>
                     <p className="text-sm sm:text-base md:text-lg leading-relaxed">

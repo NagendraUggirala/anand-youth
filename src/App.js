@@ -1,3 +1,4 @@
+// App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ModalProvider } from './context/ModalContext'; // Import the ModalProvider
@@ -8,12 +9,14 @@ import AboutPage from './pages/AboutPage';
 import ProjectsPage from './pages/ProjectsPage';
 import ContactPage from './pages/ContactPage';
 import Landinformation from './pages/Landinformation';
+import ScrollToTop from './components/ScrollToTop'; // Import the ScrollToTop component
 
 function App() {
   return (
     <ModalProvider> {/* Wrap everything with ModalProvider */}
       <Router>
         <div className="min-h-screen bg-white">
+          <ScrollToTop /> {/* Add ScrollToTop component here */}
           <Header />
           <main>
             <Routes>
