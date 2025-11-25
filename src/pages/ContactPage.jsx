@@ -7,10 +7,6 @@ const initialForm = {
   name: "",
   email: "",
   phone: "",
-  propertyType: "",
-  budget: "",
-  timeline: "",
-  subject: "",
   message: "",
   website: "" // honeypot
 };
@@ -55,30 +51,19 @@ const ContactAdvancedWithMapBottom = () => {
     {
       icon: (
         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
         </svg>
       ),
-      title: "Email Us",
-      description: "Get detailed responses",
-      details: ["info@anandrealtyy.com"],
-      action: "Send Email",
-      link: "mailto:info@anandrealtyy.com",
-      color: "from-purple-500 to-purple-600",
-      bgColor: "bg-purple-50",
-      borderColor: "border-purple-200",
-      iconColor: "text-purple-600"
-    },
-    {
-      icon: (
-        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-        </svg>
-      ),
-      title: "Call Us",
-      description: "Speak with our experts",
-      details: ["+91 98765 43210"],
-      action: "Call Now",
-      link: "tel:+919876543210",
+      title: "Office Address",
+      description: "Visit us at our location",
+      details: [
+        "Anand Youth",
+        "Hiko, 131/A, 2nd Floor",
+        "Banjara Hills, Hyderabad",
+        "Telangana - 500034, India"
+      ],
+      action: "View on Map",
+      link: "#map",
       color: "from-blue-500 to-blue-600",
       bgColor: "bg-blue-50",
       borderColor: "border-blue-200",
@@ -87,49 +72,37 @@ const ContactAdvancedWithMapBottom = () => {
     {
       icon: (
         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893c0-3.18-1.24-6.169-3.495-8.418"/>
+          <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
         </svg>
       ),
-      title: "WhatsApp",
-      description: "Quick chat assistance",
-      details: ["+91 98765 43210"],
-      action: "Start Chat",
-      link: "https://wa.me/919876543210",
+      title: "Phone / WhatsApp",
+      description: "Available for queries & support",
+      details: ["+91 1800 123 4857"],
+      action: "Call Now",
+      link: "tel:+9118001234857",
       color: "from-green-500 to-green-600",
       bgColor: "bg-green-50",
       borderColor: "border-green-200",
       iconColor: "text-green-600"
+    },
+    {
+      icon: (
+        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+        </svg>
+      ),
+      title: "Email Us",
+      description: "Send us your queries",
+      details: ["anandyouth@gmail.com"],
+      action: "Send Email",
+      link: "mailto:anandyouth@gmail.com",
+      color: "from-purple-500 to-purple-600",
+      bgColor: "bg-purple-50",
+      borderColor: "border-purple-200",
+      iconColor: "text-purple-600"
     }
   ];
 
-  const propertyTypes = [
-    "Residential Apartment",
-    "Luxury Villa",
-    "Commercial Space",
-    "Plot/Land",
-    "Investment Property",
-    "Rental Property",
-    "Vastu Consultation",
-    "General Inquiry"
-  ];
-
-  const budgets = [
-    "Below ₹50 Lakhs",
-    "₹50 Lakhs - ₹1 Crore",
-    "₹1 Crore - ₹2 Crores",
-    "₹2 Crores - ₹5 Crores",
-    "Above ₹5 Crores",
-    "Not Sure"
-  ];
-
-  const timelines = [
-    "Immediately",
-    "Within 1 Month",
-    "1-3 Months",
-    "3-6 Months",
-    "6+ Months",
-    "Just Exploring"
-  ];
 
   // validation
   const validate = (data) => {
@@ -139,11 +112,7 @@ const ContactAdvancedWithMapBottom = () => {
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) e.email = "Enter a valid email";
     if (!data.phone?.trim()) e.phone = "Phone is required";
     else if (!/^\+?[0-9 ]{7,15}$/.test(data.phone)) e.phone = "Enter a valid phone number";
-    if (!data.propertyType) e.propertyType = "Please select property type";
-    if (!data.budget) e.budget = "Please select budget range";
-    if (!data.timeline) e.timeline = "Please select timeline";
-    if (!data.subject?.trim()) e.subject = "Subject is required";
-    if (!data.message?.trim() || data.message.trim().length < 10) e.message = "Please provide a helpful message (min 10 chars)";
+    if (!data.message?.trim() || data.message.trim().length < 10) e.message = "Please provide your message (min 10 characters)";
     if (data.website && data.website.trim().length > 0) e.website = "Spam detected";
     return e;
   };
@@ -211,10 +180,15 @@ const ContactAdvancedWithMapBottom = () => {
               className="inline-block bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-xl mb-6"
             >
               <h1 className="text-2xl md:text-4xl font-bold mb-3">
-                Let's <span className="text-amber-300">Connect</span>
+                ANAND YOUTH – <span className="text-amber-300">CONTACT US</span>
               </h1>
-              <p className="text-base md:text-lg text-blue-100 mb-4 leading-relaxed">
-                Ready to find your dream property? Our team is here to guide you every step of the way.
+              <p className="text-base md:text-lg text-blue-100 mb-2 leading-relaxed font-semibold">
+                We're Here to Connect, Support & Serve
+              </p>
+              <p className="text-base md:text-lg text-blue-50 mb-4 leading-relaxed">
+                Have a question? Want to join our mission? We'd love to hear from you. 
+                If you have questions, want to volunteer, need help, or wish to collaborate—our team is always ready to assist. 
+                Reach out to us anytime. Together, we can create meaningful change.
               </p>
             </motion.div>
 
@@ -222,7 +196,7 @@ const ContactAdvancedWithMapBottom = () => {
               <motion.a 
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                href="tel:+919876543210" 
+                href="tel:+9118001234857" 
                 className="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-green-500/25 text-sm flex items-center justify-center gap-2"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -233,7 +207,7 @@ const ContactAdvancedWithMapBottom = () => {
               <motion.a 
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                href="https://wa.me/919876543210" 
+                href="https://wa.me/9118001234857" 
                 className="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-emerald-500/25 text-sm flex items-center justify-center gap-2"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -261,9 +235,9 @@ const ContactAdvancedWithMapBottom = () => {
               <motion.div variants={fadeUp} className="lg:col-span-1 flex">
                 <div className="bg-white rounded-xl shadow-md p-6 border border-gray-200 w-full flex flex-col">
                   <div className="flex-1">
-                    <h2 className="text-xl font-bold text-slate-800 mb-4">Get In Touch</h2>
+                    <h2 className="text-xl font-bold text-slate-800 mb-4">Contact Information</h2>
                     <p className="text-slate-600 mb-6 text-sm leading-relaxed">
-                      Have questions about properties or need guidance? We're here to help you find your perfect home.
+                      Stay connected with our activities and updates. Reach out to us for queries, volunteer requests, or support.
                     </p>
                     
                     <div className="space-y-4 mb-6">
@@ -294,58 +268,8 @@ const ContactAdvancedWithMapBottom = () => {
                   </div>
 
                   <div className="border-t border-gray-200 pt-4 mt-auto">
-                    <h4 className="font-semibold text-slate-800 mb-2 text-sm">Office Hours</h4>
-                    <p className="text-slate-600 text-xs"><strong>Monday - Saturday</strong>: 9:00 AM - 7:00 PM</p>
-                    <p className="text-slate-600 text-xs"><strong>Sunday</strong>: 10:00 AM - 2:00 PM</p>
-                    
-                    {/* Follow Us Section */}
-                    <div className="mt-4 pt-4 border-t border-gray-200">
-                      <h4 className="font-semibold text-slate-800 mb-3 text-sm">Follow Us</h4>
-                      <div className="flex space-x-3">
-                        <a 
-                          href="https://linkedin.com/company/anandrealtyy" 
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-2 rounded-lg transition-all duration-300 hover:shadow-md hover:scale-105"
-                          aria-label="Follow us on LinkedIn"
-                        >
-                          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                          </svg>
-                        </a>
-                        <a 
-                          href="https://twitter.com/anandrealtyy" 
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="bg-gradient-to-r from-sky-500 to-sky-600 text-white p-2 rounded-lg transition-all duration-300 hover:shadow-md hover:scale-105"
-                          aria-label="Follow us on Twitter"
-                        >
-                          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-                          </svg>
-                        </a>
-                        <a 
-                          href="https://wa.me/919876543210" 
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="bg-gradient-to-r from-green-500 to-green-600 text-white p-2 rounded-lg transition-all duration-300 hover:shadow-md hover:scale-105"
-                          aria-label="Chat with us on WhatsApp"
-                        >
-                          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893c0-3.18-1.24-6.169-3.495-8.418"/>
-                          </svg>
-                        </a>
-                        <a 
-                          href="mailto:info@anandrealtyy.com" 
-                          className="bg-gradient-to-r from-purple-500 to-purple-600 text-white p-2 rounded-lg transition-all duration-300 hover:shadow-md hover:scale-105"
-                          aria-label="Send us an email"
-                        >
-                          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
+                    {/* Social Media Section */}
+                  
                   </div>
                 </div>
               </motion.div>
@@ -358,7 +282,7 @@ const ContactAdvancedWithMapBottom = () => {
                       <div className="mb-4 md:mb-0">
                         <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-2">Send Us a Message</h2>
                         <p className="text-slate-600 text-sm md:text-base max-w-2xl">
-                          Fill out the form below with your requirements and we'll get back to you within 24 hours with personalized property recommendations.
+                          Fill out the form below and we'll get back to you soon. Whether you want to volunteer, have questions, or need support—we're here to help.
                         </p>
                       </div>
                     </div>
@@ -377,7 +301,7 @@ const ContactAdvancedWithMapBottom = () => {
                           </div>
                           <div>
                             <h4 className="font-semibold text-emerald-800 text-sm md:text-base">Message Sent Successfully!</h4>
-                            <p className="text-emerald-600 text-xs md:text-sm">We'll contact you shortly with property options.</p>
+                            <p className="text-emerald-600 text-xs md:text-sm">We'll contact you shortly. Thank you for reaching out!</p>
                           </div>
                         </div>
                       </motion.div>
@@ -414,7 +338,7 @@ const ContactAdvancedWithMapBottom = () => {
                         />
                       </div>
 
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                      <div>
                         <FormField 
                           id="phone" 
                           label="Phone Number *" 
@@ -423,65 +347,6 @@ const ContactAdvancedWithMapBottom = () => {
                           onChange={handleChange} 
                           placeholder="+91 98765 43210" 
                           error={errors.phone} 
-                          required 
-                        />
-                        <div>
-                          <label className="block text-sm font-semibold text-slate-700 mb-2">Property Type *</label>
-                          <select 
-                            name="propertyType" 
-                            value={formData.propertyType} 
-                            onChange={handleChange} 
-                            className={`w-full px-3 md:px-4 py-2 md:py-3 bg-slate-50 border ${errors.propertyType ? "border-rose-400" : "border-slate-300"} rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all duration-300 text-sm md:text-base`} 
-                            aria-invalid={!!errors.propertyType}
-                          >
-                            <option value="">Select property type</option>
-                            {propertyTypes.map((t, idx) => <option key={idx} value={t}>{t}</option>)}
-                          </select>
-                          {errors.propertyType && <p className="text-rose-600 text-sm mt-2">{errors.propertyType}</p>}
-                        </div>
-                      </div>
-
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-                        <div>
-                          <label className="block text-sm font-semibold text-slate-700 mb-2">Budget Range *</label>
-                          <select 
-                            name="budget" 
-                            value={formData.budget} 
-                            onChange={handleChange} 
-                            className={`w-full px-3 md:px-4 py-2 md:py-3 bg-slate-50 border ${errors.budget ? "border-rose-400" : "border-slate-300"} rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all duration-300 text-sm md:text-base`} 
-                            aria-invalid={!!errors.budget}
-                          >
-                            <option value="">Select budget range</option>
-                            {budgets.map((b, idx) => <option key={idx} value={b}>{b}</option>)}
-                          </select>
-                          {errors.budget && <p className="text-rose-600 text-sm mt-2">{errors.budget}</p>}
-                        </div>
-
-                        <div>
-                          <label className="block text-sm font-semibold text-slate-700 mb-2">Timeline *</label>
-                          <select 
-                            name="timeline" 
-                            value={formData.timeline} 
-                            onChange={handleChange} 
-                            className={`w-full px-3 md:px-4 py-2 md:py-3 bg-slate-50 border ${errors.timeline ? "border-rose-400" : "border-slate-300"} rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all duration-300 text-sm md:text-base`} 
-                            aria-invalid={!!errors.timeline}
-                          >
-                            <option value="">Select timeline</option>
-                            {timelines.map((t, idx) => <option key={idx} value={t}>{t}</option>)}
-                          </select>
-                          {errors.timeline && <p className="text-rose-600 text-sm mt-2">{errors.timeline}</p>}
-                        </div>
-                      </div>
-
-                      <div>
-                        <FormField 
-                          id="subject" 
-                          label="Subject *" 
-                          name="subject" 
-                          value={formData.subject} 
-                          onChange={handleChange} 
-                          placeholder="Enter subject of your inquiry" 
-                          error={errors.subject} 
                           required 
                         />
                       </div>
@@ -493,7 +358,7 @@ const ContactAdvancedWithMapBottom = () => {
                           rows="4" 
                           value={formData.message} 
                           onChange={handleChange} 
-                          placeholder="Tell us about your specific requirements, preferred locations, amenities, and any other details that will help us find your perfect property..." 
+                          placeholder="Tell us about your query, volunteer interest, or how we can help you..." 
                           className={`w-full px-3 md:px-4 py-2 md:py-3 bg-slate-50 border ${errors.message ? "border-rose-400" : "border-slate-300"} rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all duration-300 resize-none text-sm md:text-base`} 
                           aria-invalid={!!errors.message} 
                         />
@@ -543,7 +408,7 @@ const ContactAdvancedWithMapBottom = () => {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} className="space-y-6">
             <div className="text-center mb-6">
               <motion.h3 initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="text-2xl font-bold text-slate-800">Visit Our Office</motion.h3>
-              <motion.p initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="text-slate-600 text-sm max-w-2xl mx-auto">Find us easily for personalized consultation and site visits</motion.p>
+              <motion.p initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="text-slate-600 text-sm max-w-2xl mx-auto">Anand Youth — Serving Humanity with Compassion, Responsibility & Unity.</motion.p>
             </div>
 
             <div className="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden">
@@ -557,7 +422,7 @@ const ContactAdvancedWithMapBottom = () => {
                     allowFullScreen=""
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="Anand Realtyy Office Location"
+                    title="Anand Youth Office Location"
                     className="absolute inset-0"
                   />
                 ) : (
@@ -596,8 +461,8 @@ const ContactAdvancedWithMapBottom = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h3 className="text-lg font-bold text-slate-800 mb-2">Thanks — we'll call you soon.</h3>
-              <p className="text-slate-600 text-sm mb-4">One of our specialists will reach out to schedule a consultation.</p>
+              <h3 className="text-lg font-bold text-slate-800 mb-2">Thanks — we'll contact you soon.</h3>
+              <p className="text-slate-600 text-sm mb-4">Our team will reach out to you shortly. Thank you for connecting with Anand Youth!</p>
               <button 
                 onClick={() => setShowModal(false)} 
                 className="px-4 py-2 rounded-lg bg-blue-500 text-white font-semibold text-sm"

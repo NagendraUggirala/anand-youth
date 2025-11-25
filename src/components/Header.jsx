@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { useMultiFormModal } from "../context/ModalContext";
-import RealEstateForm from "../pages/Landinformation";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
-  const { openModal } = useMultiFormModal();
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 30);
@@ -17,146 +14,166 @@ const Header = () => {
 
   const navItems = [
     { path: "/", label: "Home" },
-    { path: "/about", label: "About" },
-    { path: "/projects", label: "Projects" },
+    
+    { path: "/initiatives", label: "Initiatives" },
+    { path: "/volunteer", label: "Volunteer" },
+    { path: "/gallery", label: "Gallery" },
     { path: "/contact", label: "Contact" },
+    { path: "/about", label: "About" },
   ];
 
   const isActiveLink = (path) => location.pathname === path;
 
-  const handleLandInfoClick = () => {
-    openModal(<RealEstateForm />);
+  const handleCTAClick = () => {
+    // Redirect to Join Us page
+    window.location.href = "/join-us";
     setIsMenuOpen(false);
   };
 
   return (
     <header
-      className={`sticky top-0 z-40 transition-all duration-300 
-      bg-white border-b 
-      ${isScrolled ? "shadow-md border-gray-200" : "border-gray-100"}`}
+      className={`sticky top-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-white shadow-md border-b border-gray-200"
+          : "bg-white border-b border-gray-100"
+      }`}
     >
-      <div className="container mx-auto px-4">
-        {/* Row */}
-        <div className="flex justify-between items-center py-3 md:py-4">
-          {/* Logo - Improved Mobile Alignment */}
-          <Link to="/" className="flex items-center space-x-2 md:space-x-3 group">
-            <div className="w-12 h-12 md:w-16 md:h-16 rounded-full border-2 border-orange-200 overflow-hidden shadow-sm group-hover:shadow-md transition-all duration-300">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8">
+        <div className="flex justify-between items-center py-4 md:py-5">
+          {/* Logo / Brand Name */}
+          <div className="logo">
+            <Link to="/" className="flex items-center space-x-2 md:space-x-3 group">
+              {/* Logo Image (if available) */}
+              <div className="flex items-center space-x-2">
+                <div className="flex items-center space-x-2">
+              <div className="w-12 h-12 md:w-16 md:h-16 rounded-full border-2 border-orange-200 overflow-hidden shadow-sm group-hover:shadow-md transition-all duration-300">
+                <img
+                  src="./images/image.png"
+                  alt="Founder"
+                  className="w-full h-full object-cover object-top "
+                />
+              </div>
               <img
-                src="./images/image.png"
-                alt="Founder"
-                className="w-full h-full object-cover object-top"
+                src="./images/Anandhlogo.png"
+                alt="Anand Logo"
+                className="w-8  pl-2 h-10 md:w-10 md:h-12 object-contain"
               />
             </div>
-
-            <div className="flex flex-col items-start">
-              <div className="flex items-center space-x-2">
-                <img
-                  src="./images/Anandhlogo.png"
-                  alt="Anand Logo"
-                  className="w-8 h-10 md:w-10 md:h-12 object-contain"
-                />
-                <div className="flex flex-col items-start">
-                  <h1 className="text-lg md:text-xl font-bold text-blue-800">
-                    <span className="text-orange-500">ANAND </span>REALTYY
+                <div>
+                  <h1 className="text-xl md:text-2xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+                    <span className="text-orange-500">Anand </span>
+                    <span className="text-blue-700">Youth</span>
                   </h1>
-                  <p className="text-xs text-gray-600 italic mt-1">
+                  <p className="text-xs text-gray-600 italic hidden md:block">
                     "Dharmo Rakshati Rakshitah"
                   </p>
                 </div>
               </div>
-            </div>
-          </Link>
+            </Link>
+          </div>
 
-          {/* Desktop Navigation - Increased Size */}
-          <nav className="hidden lg:flex items-center space-x-3">
-            {navItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className={`px-4 py-2.5 rounded-lg text-base font-semibold transition-all duration-200 ${
-                  isActiveLink(item.path)
-                    ? "text-blue-700 bg-blue-100 border border-blue-200"
-                    : "text-blue-800 hover:bg-blue-50 hover:text-blue-700"
-                }`}
-              >
-                {item.label}
-              </Link>
-            ))}
-
-            {/* Land Information Button - Increased Size */}
-            <button
-              onClick={handleLandInfoClick}
-              className="px-6 py-3 rounded-lg text-base font-semibold bg-gradient-to-r from-green-600 to-green-700 text-white hover:from-green-700 hover:to-green-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center space-x-2"
-            >
-              <span className="text-lg">📄</span>
-              <span>Land Information Form</span>
-            </button>
+          {/* Desktop Navigation Menu */}
+          <nav className="hidden lg:block" aria-label="Main navigation">
+            <ul className="flex items-center space-x-1 list-none m-0 p-0">
+              {navItems.map((item) => (
+                <li key={item.path}>
+                  <Link
+                    to={item.path}
+                    className={`px-4 py-2 rounded-lg text-base font-medium transition-all duration-200 ${
+                      isActiveLink(item.path)
+                        ? "text-blue-700 bg-blue-50 border border-blue-200"
+                        : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                    }`}
+                    aria-current={isActiveLink(item.path) ? "page" : undefined}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </nav>
 
-          {/* Mobile menu button - Improved Size */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 md:p-3 text-blue-800 hover:bg-blue-50 rounded-lg transition-all duration-200"
-          >
-            {isMenuOpen ? (
-              <svg
-                className="w-6 h-6 md:w-7 md:h-7"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            ) : (
-              <svg
-                className="w-6 h-6 md:w-7 md:h-7"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            )}
-          </button>
+          {/* CTA Button - Desktop */}
+          <div className="hidden lg:block">
+            <button
+              onClick={handleCTAClick}
+              className="cta-btn px-6 py-2.5 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105"
+            >
+              Join Us
+            </button>
+          </div>
+
+          {/* Mobile Menu Icon (Hamburger) */}
+          <div className="menu-icon lg:hidden">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="p-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-all duration-200"
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isMenuOpen}
+            >
+              {isMenuOpen ? (
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              )}
+            </button>
+          </div>
         </div>
 
-        {/* Mobile Menu - Improved Alignment */}
+        {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden border-t border-gray-200 pb-4">
-            <nav className="space-y-2 pt-3">
-              {navItems.map((item) => (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  onClick={() => setIsMenuOpen(false)}
-                  className={`block px-4 py-3 text-base font-medium rounded-lg transition-all duration-200 ${
-                    isActiveLink(item.path)
-                      ? "bg-blue-100 text-blue-700 border border-blue-200"
-                      : "text-blue-800 hover:bg-blue-50 hover:text-blue-700"
-                  }`}
-                >
-                  {item.label}
-                </Link>
-              ))}
-
-              {/* Mobile Land Info Button */}
-              <button
-                onClick={handleLandInfoClick}
-                className="w-full text-left px-4 py-3 bg-gradient-to-r from-green-600 to-green-700 text-white text-base font-semibold rounded-lg mt-2 hover:from-green-700 hover:to-green-800 transition-all duration-300 flex items-center space-x-2"
-              >
-                <span className="text-lg">📄</span>
-                <span>Land Information Form</span>
-              </button>
+          <div className="lg:hidden border-t border-gray-200 py-4">
+            <nav aria-label="Mobile navigation">
+              <ul className="space-y-2 list-none m-0 p-0">
+                {navItems.map((item) => (
+                  <li key={item.path}>
+                    <Link
+                      to={item.path}
+                      onClick={() => setIsMenuOpen(false)}
+                      className={`block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200 ${
+                        isActiveLink(item.path)
+                          ? "text-blue-700 bg-blue-50 border border-blue-200"
+                          : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                      }`}
+                      aria-current={isActiveLink(item.path) ? "page" : undefined}
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+                <li className="pt-2">
+                  <button
+                    onClick={handleCTAClick}
+                    className="cta-btn w-full text-left px-4 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-md"
+                  >
+                    Join Us
+                  </button>
+                </li>
+              </ul>
             </nav>
           </div>
         )}

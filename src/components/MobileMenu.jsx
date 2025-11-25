@@ -38,7 +38,7 @@ const MobileMenu = ({ onClose }) => {
                 <span className="text-white font-bold text-lg">A</span>
               </div>
               <div>
-                <h1 className="text-xl font-bold text-gray-900">Anand Realtyy</h1>
+                <h1 className="text-xl font-bold text-gray-900">Anand YOUTH</h1>
                 <p className="text-xs text-gray-600">Building Legacies</p>
               </div>
             </div>

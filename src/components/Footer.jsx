@@ -1,25 +1,17 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useMultiFormModal } from "../context/ModalContext";
-import Landinformation from "../pages/Landinformation";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const { openModal } = useMultiFormModal();
   const [activeModal, setActiveModal] = useState(null);
 
   const quickLinks = [
-    { path: "/", label: "Home" },
     { path: "/about", label: "About" },
-    { path: "/projects", label: "Projects" },
+    { path: "/initiatives", label: "Initiatives" },
+    { path: "/volunteer", label: "Volunteer" },
+    { path: "/gallery", label: "Gallery" },
     { path: "/contact", label: "Contact" }
   ];
-
-  const handleLandInfoClick = (e) => {
-    e.preventDefault();
-    openModal(<Landinformation />);
-  };
-
   const openLegalModal = (type) => {
     setActiveModal(type);
   };
@@ -68,7 +60,7 @@ const Footer = () => {
             <h4 class="text-lg font-semibold text-blue-800 mb-2">Information We Collect</h4>
             <ul class="list-disc list-inside space-y-1 text-gray-600">
               <li>Personal identification information (Name, email address, phone number)</li>
-              <li>Property preferences and requirements</li>
+              <li>Business information and trade requirements</li>
               <li>Communication history and inquiries</li>
               <li>Site usage data and analytics</li>
             </ul>
@@ -77,16 +69,16 @@ const Footer = () => {
           <div>
             <h4 class="text-lg font-semibold text-blue-800 mb-2">How We Use Your Information</h4>
             <ul class="list-disc list-inside space-y-1 text-gray-600">
-              <li>Provide personalized property recommendations</li>
+              <li>Provide personalized trading solutions and recommendations</li>
               <li>Process your inquiries and service requests</li>
-              <li>Send relevant property updates and market insights</li>
+              <li>Send relevant market updates and trade insights</li>
               <li>Improve our services and customer experience</li>
             </ul>
           </div>
 
           <div>
             <h4 class="text-lg font-semibold text-blue-800 mb-2">Data Protection</h4>
-            <p class="text-gray-600">We implement security measures to protect your personal information and maintain confidentiality in all real estate transactions.</p>
+            <p class="text-gray-600">We implement security measures to protect your personal information and maintain confidentiality in all trade transactions.</p>
           </div>
         </div>
       `
@@ -98,27 +90,27 @@ const Footer = () => {
           <p class="text-gray-700"><strong>Effective Date:</strong> ${currentYear}</p>
           
           <div>
-            <h4 class="text-lg font-semibold text-blue-800 mb-2">Property Information</h4>
+            <h4 class="text-lg font-semibold text-blue-800 mb-2">Product Information</h4>
             <ul class="list-disc list-inside space-y-1 text-gray-600">
-              <li>All property details, prices, and specifications are subject to change without prior notice</li>
-              <li>Images and renderings are for representation purposes only</li>
-              <li>Actual properties may vary from displayed information</li>
+              <li>All product details, prices, and specifications are subject to change without prior notice</li>
+              <li>Images and descriptions are for representation purposes only</li>
+              <li>Actual products may vary from displayed information</li>
             </ul>
           </div>
 
           <div>
-            <h4 class="text-lg font-semibold text-blue-800 mb-2">Booking & Transactions</h4>
+            <h4 class="text-lg font-semibold text-blue-800 mb-2">Orders & Transactions</h4>
             <ul class="list-disc list-inside space-y-1 text-gray-600">
-              <li>Property bookings are subject to availability</li>
-              <li>All transactions must comply with RERA regulations</li>
-              <li>Booking amounts are non-refundable as per policy terms</li>
-              <li>Payment plans are subject to company approval</li>
+              <li>Orders are subject to product availability and supplier confirmation</li>
+              <li>All transactions must comply with international trade regulations</li>
+              <li>Payment terms are subject to company approval and credit verification</li>
+              <li>Shipping and delivery timelines are estimates and may vary</li>
             </ul>
           </div>
 
           <div>
             <h4 class="text-lg font-semibold text-blue-800 mb-2">Legal Compliance</h4>
-            <p class="text-gray-600">All real estate transactions are governed by applicable state laws and RERA regulations. Buyers are advised to verify all documents before proceeding.</p>
+            <p class="text-gray-600">All trade transactions are governed by applicable international trade laws and customs regulations. Clients are advised to verify all documentation before proceeding.</p>
           </div>
         </div>
       `
@@ -129,18 +121,18 @@ const Footer = () => {
         <div class="space-y-4">
           <div>
             <h4 class="text-lg font-semibold text-blue-800 mb-2">Information Accuracy</h4>
-            <p class="text-gray-600">While we strive to provide accurate and up-to-date information about properties and real estate services, we cannot guarantee the completeness or accuracy of all content. Prospective buyers should:</p>
+            <p class="text-gray-600">While we strive to provide accurate and up-to-date information about products and trading services, we cannot guarantee the completeness or accuracy of all content. Clients should:</p>
             <ul class="list-disc list-inside space-y-1 text-gray-600 mt-2">
-              <li>Verify all property details personally</li>
-              <li>Check original documents and approvals</li>
-              <li>Consult legal advisors before transactions</li>
-              <li>Visit project sites for firsthand assessment</li>
+              <li>Verify all product details and specifications</li>
+              <li>Check original documentation and certifications</li>
+              <li>Consult trade advisors before transactions</li>
+              <li>Review samples when available</li>
             </ul>
           </div>
 
           <div>
-            <h4 class="text-lg font-semibold text-blue-800 mb-2">Investment Risks</h4>
-            <p class="text-gray-600">Real estate investments are subject to market risks. Past performance doesn't guarantee future returns. Investors should make independent decisions based on their risk assessment.</p>
+            <h4 class="text-lg font-semibold text-blue-800 mb-2">Trade Risks</h4>
+            <p class="text-gray-600">International trade involves various risks including currency fluctuations, regulatory changes, and market volatility. Clients should make independent decisions based on their risk assessment.</p>
           </div>
 
           <div>
@@ -149,60 +141,23 @@ const Footer = () => {
           </div>
         </div>
       `
-    },
-    RERA: {
-      title: "RERA Compliance",
-      content: `
-        <div class="space-y-4">
-          <div class="bg-green-50 border border-green-200 rounded-lg p-4">
-            <h4 class="text-lg font-semibold text-green-800 mb-2">Registered with RERA</h4>
-            <p class="text-green-700">Anand Realtyy is a registered real estate agent under RERA regulations, ensuring transparency and consumer protection in all our transactions.</p>
-          </div>
-
-          <div>
-            <h4 class="text-lg font-semibold text-blue-800 mb-2">RERA Registration Details</h4>
-            <ul class="list-disc list-inside space-y-1 text-gray-600">
-              <li><strong>Registration Number:</strong> RERA/TS/XXXX/2023</li>
-              <li><strong>Valid Until:</strong> December 31, 2026</li>
-              <li><strong>Jurisdiction:</strong> Telangana State</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="text-lg font-semibold text-blue-800 mb-2">Consumer Protection</h4>
-            <p class="text-gray-600">As per RERA guidelines, we ensure:</p>
-            <ul class="list-disc list-inside space-y-1 text-gray-600 mt-2">
-              <li>Transparent project details and pricing</li>
-              <li>Timely project completion and delivery</li>
-              <li>Escrow account management for customer funds</li>
-              <li>Adherence to approved building plans and specifications</li>
-              <li>Clear title and documentation for all properties</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="text-lg font-semibold text-blue-800 mb-2">Grievance Redressal</h4>
-            <p class="text-gray-600">For any complaints or disputes, customers can contact our grievance officer or approach the RERA authority directly.</p>
-          </div>
-        </div>
-      `
     }
   };
 
   return (
     <>
-      <footer className="bg-gradient-to-b from-gray-900 to-[#081526] text-white">
+      <footer className="bg-gradient-to-b from-blue-900 to-[#093a7a] text-white">
         <div className="container mx-auto px-6">
           
           {/* Main Footer Content */}
           <div className="py-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-4 lg:gap-6 mb-6">
               
               {/* Company Info */}
-              <div className="text-left">
-                <div className="flex items-start space-x-4 mb-4">
+              <div className="text-left md:col-span-4">
+                <div className="flex items-center space-x-3 mb-4">
                   {/* Founder Image and Logo */}
-                  <div className="flex items-center space-x-3">
+                  <div className="flex items-center space-x-2 flex-shrink-0">
                     <div className="w-16 h-16 rounded-full border-2 border-orange-200 overflow-hidden shadow-lg">
                       <img
                         src="/images/image.png"
@@ -213,31 +168,78 @@ const Footer = () => {
                     <div className="w-14 h-14">
                       <img
                         src="/images/Anandhlogo.png"
-                        alt="Anand Realtyy"
+                        alt="Anand Youth"
                         className="w-full h-full object-contain"
                       />
                     </div>
                   </div>
-                  <div className="text-left">
-                    <h2 className="text-2xl font-bold">
+                  {/* Text immediately to the side */}
+                  <div className="flex flex-col">
+                    <h2 className="text-xl md:text-2xl font-bold">
                       <span className="text-orange-400">ANAND</span> 
-                      <span className="text-white"> Realtyy</span>
+                      <span className="text-white"> Youth</span>
                     </h2>
-                    <p className="text-orange-200 text-sm italic">"Dharmo Rakshati Rakshitah"</p>
+                    <p className="text-orange-200 text-xs md:text-sm italic">"Connecting Markets. Delivering Excellence."</p>
                   </div>
                 </div>
 
                 <div className="text-left">
                   <p className="text-gray-300 mb-3 text-sm leading-relaxed">
-                    Transforming raw land into premium residential plots with 25+ years of expertise in ethical real estate development.
+                    Through direct involvement in community service activities, we aim to build a better society for all.
                   </p>
                   <p className="text-gray-300 mb-3 text-sm leading-relaxed">
-                    Creating sustainable, Vastu-compliant plotted communities with complete legal transparency.
+                   To inspire a generation that values service, understands responsibility, and works selflessly for the welfare of society, nature, and humanity.
                   </p>
                 </div>
+              </div>
 
-                {/* Social Media with SVG Icons */}
-                <div className="flex space-x-3">
+              {/* Quick Links */}
+              <div className="text-left md:col-span-2 md:pl-6">
+                <h3 className="text-lg font-semibold mb-3 text-orange-400">Quick Links</h3>
+                <div className="space-y-2">
+                  {quickLinks.map((link, index) => (
+                    <Link
+                      key={index}
+                      to={link.path}
+                      className="block text-gray-300 py-1 text-sm hover:text-orange-400 transition-all duration-200"
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {/* Contact Info */}
+              <div className="text-left md:col-span-3 md:pl-4">
+                <h3 className="text-lg font-semibold mb-3 text-orange-400">Contact</h3>
+                <div className="space-y-3 text-sm">
+                  <div className="flex flex-col items-start space-y-2">
+                    <div className="flex items-start space-x-2">
+                      <i className="fas fa-map-marker-alt text-orange-400 mt-1 text-sm" />
+                      <span className="text-gray-300 text-left">
+                        Hiko, 131/A, 2nd Floor<br />
+                        Banjara Hills, Hyderabad<br />
+                        Telangana - 500034
+                      </span>
+                    </div>
+
+                    <div className="flex items-center space-x-2">
+                      <i className="fas fa-phone text-orange-400 text-sm" />
+                      <span className="text-gray-300">+91 1800 123 4857</span>
+                    </div>
+
+                    <div className="flex items-center space-x-2">
+                      <i className="fas fa-envelope text-orange-400 text-sm" />
+                      <span className="text-gray-300">info@anandimportsexports.com</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Follow Us Section */}
+              <div className="text-left md:col-span-3 md:pl-4">
+                <h3 className="text-lg font-semibold mb-3 text-orange-400">Follow Us</h3>
+                <div className="flex flex-wrap gap-3">
                   {[
                     { name: "facebook", url: "#", color: "hover:bg-blue-600" },
                     { name: "twitter", url: "#", color: "hover:bg-blue-400" },
@@ -258,56 +260,6 @@ const Footer = () => {
                   ))}
                 </div>
               </div>
-
-              {/* Quick Links */}
-              <div className="text-left">
-                <h3 className="text-lg font-semibold mb-3 text-orange-400">Quick Links</h3>
-                <div className="space-y-2">
-                  {quickLinks.map((link, index) => (
-                    <Link
-                      key={index}
-                      to={link.path}
-                      className="block text-gray-300 py-1 text-sm hover:text-orange-400 transition-all duration-200"
-                    >
-                      {link.label}
-                    </Link>
-                  ))}
-                  {/* Land Information as modal trigger */}
-                  <button
-                    onClick={handleLandInfoClick}
-                    className="block text-gray-300 py-1 text-sm hover:text-orange-400 transition-all duration-200 w-full text-left"
-                  >
-                    Land Information Form
-                  </button>
-                </div>
-              </div>
-
-              {/* Contact Info */}
-              <div className="text-left">
-                <h3 className="text-lg font-semibold mb-3 text-orange-400">Contact</h3>
-                <div className="space-y-3 text-sm">
-                  <div className="flex flex-col items-start space-y-2">
-                    <div className="flex items-start space-x-2">
-                      <i className="fas fa-map-marker-alt text-orange-400 mt-1 text-sm" />
-                      <span className="text-gray-300 text-left">
-                        Hiko, 131/A, 2nd Floor<br />
-                        Banjara Hills, Hyderabad<br />
-                        Telangana - 500034
-                      </span>
-                    </div>
-
-                    <div className="flex items-center space-x-2">
-                      <i className="fas fa-phone text-orange-400 text-sm" />
-                      <span className="text-gray-300">+91 1800 123 4857</span>
-                    </div>
-
-                    <div className="flex items-center space-x-2">
-                      <i className="fas fa-envelope text-orange-400 text-sm" />
-                      <span className="text-gray-300">info@anandrealty.com</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
 
@@ -318,13 +270,13 @@ const Footer = () => {
               {/* Copyright */}
               <div className="text-center md:text-left">
                 <p className="text-gray-400 text-sm">
-                  © {currentYear} <span className="text-orange-400 font-semibold">Anand Realtyy</span>. All rights reserved.
+                  © {currentYear} <span className="text-orange-400 font-semibold">Anand Youth</span>. All rights reserved.
                 </p>
               </div>
 
               {/* Legal Links */}
               <div className="flex flex-wrap justify-center gap-4">
-                {["Privacy", "Terms", "Disclaimer", "RERA"].map((item) => (
+                {["Privacy", "Terms", "Disclaimer"].map((item) => (
                   <button
                     key={item}
                     onClick={() => openLegalModal(item)}

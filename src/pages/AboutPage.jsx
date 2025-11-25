@@ -11,9 +11,9 @@ const About = () => {
   const isInView3 = useInView(ref3, { once: true, threshold: 0.3 });
 
   const milestones = [
-    { year: "1998", title: "Foundation", description: "Anand Realtyy established with vision of ethical real estate" },
+    { year: "1998", title: "Foundation", description: "Anand YOUTH established with vision of ethical real estate" },
     { year: "2005", title: "Expansion", description: "Diversified into infrastructure and cinema production" },
-    { year: "2014", title: "Consolidation", description: "Unified all verticals under Anand Realtyy brand" },
+    { year: "2014", title: "Consolidation", description: "Unified all verticals under Anand YOUTH brand" },
     { year: "2025", title: "Innovation", description: "Launched future-ready real estate solutions" }
   ];
 
@@ -42,7 +42,7 @@ const About = () => {
 
   const sectors = [
     {
-      title: "Realtyy Division",
+      title: "YOUTH Division",
       description: "Creating dream spaces with legal transparency and Vastu compliance",
       stats: "50+ Projects",
       color: "from-blue-500 to-blue-600"
@@ -203,7 +203,7 @@ const About = () => {
                     >
                       <div className="bg-white/95 backdrop-blur-sm px-3 md:px-4 py-1 md:py-2 rounded-full shadow-lg text-xs md:text-sm font-semibold text-gray-700 border border-gray-100 group-hover:border-orange-200 group-hover:shadow-xl transition-all duration-300">
                         <div className="text-xs text-gray-500 group-hover:text-orange-500 transition-colors">Founder & Chairman</div>
-                        <div className="uppercase text-xs tracking-wide group-hover:text-blue-600 transition-colors">ANAND Realtyy</div>
+                        <div className="uppercase text-xs tracking-wide group-hover:text-blue-600 transition-colors">ANAND YOUTH</div>
                       </div>
                     </motion.div>
                   </div>
@@ -243,7 +243,7 @@ const About = () => {
                   <div className="mt-4 md:mt-6 text-gray-700 space-y-4 w-full">
                     <p className="text-sm sm:text-base md:text-lg leading-relaxed">
                       A visionary leader with an unwavering commitment to excellence, Anand founded
-                      Anand Realtyy in 1998 with a simple yet powerful vision: to create sustainable
+                      Anand YOUTH in 1998 with a simple yet powerful vision: to create sustainable
                       businesses that transform communities and inspire generations.
                     </p>
                     <p className="text-sm sm:text-base md:text-lg leading-relaxed">
@@ -252,11 +252,11 @@ const About = () => {
                       from a single real estate venture to a diversified conglomerate with global presence.
                     </p>
                     
-                    {/* Added Realtyy Information */}
+                    {/* Added YOUTH Information */}
                     <div className="bg-blue-50 rounded-lg p-4 md:p-6 mt-4 border-l-4 border-blue-500">
-                      <h4 className="font-bold text-blue-800 text-base sm:text-lg md:text-xl mb-2">About Anand Realtyy</h4>
+                      <h4 className="font-bold text-blue-800 text-base sm:text-lg md:text-xl mb-2">About Anand YOUTH</h4>
                       <p className="text-gray-700 text-xs sm:text-sm md:text-base">
-                        Under Anand's leadership, Anand Realtyy has emerged as a trusted name in plot development, 
+                        Under Anand's leadership, Anand YOUTH has emerged as a trusted name in plot development, 
                         transforming raw land into premium residential ventures. With 25+ years of expertise, 
                         we specialize in creating sustainable, Vastu-compliant plotted communities that offer 
                         complete legal transparency and exceptional value appreciation.
@@ -297,7 +297,7 @@ const About = () => {
           >
             <motion.div variants={itemVariants} className="text-center mb-12 md:mb-16">
               <h2 className="text-2xl md:text-4xl font-bold text-blue-800 mb-4 md:mb-6">
-                About Anand Realtyy
+                About Anand YOUTH
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto px-2 sm:px-4">
                 Transforming raw land into premium residential plots with 25+ years of expertise
@@ -315,7 +315,7 @@ const About = () => {
                       <div className="space-y-4 text-left">
                         <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed">
                           <span className="font-semibold text-blue-800">
-                            Anand Realtyy specializes in plotted ventures that offer:
+                            Anand YOUTH specializes in plotted ventures that offer:
                           </span>{" "}
                           Complete legal transparency, premium infrastructure, Vastu-compliant layouts, 
                           and exceptional value appreciation potential for every investor.
@@ -499,7 +499,7 @@ const About = () => {
               <div className="w-20 h-1 md:w-24 md:h-1 bg-gradient-to-r from-blue-500 to-orange-500 mx-auto mb-6 md:mb-8 rounded-full"></div>
               <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed mb-6 md:mb-8 px-2 sm:px-4">
                 With expanding ventures in plotted developments, township projects, infrastructure, 
-                and several future-ready sectors, Anand Realtyy stands for responsible growth, 
+                and several future-ready sectors, Anand YOUTH stands for responsible growth, 
                 transparent operations, and a vision to build assets, experiences, and opportunities 
                 that last for generations.
               </p>
@@ -532,7 +532,7 @@ const About = () => {
               Ready to Be Part of Our Story?
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-blue-200 mb-6 md:mb-8 max-w-2xl mx-auto px-2 sm:px-4">
-              Discover how Anand Realtyy's commitment to quality and trust can transform your real estate dreams into reality.
+              Discover how Anand YOUTH's commitment to quality and trust can transform your real estate dreams into reality.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
               <Link
