@@ -177,9 +177,9 @@ const Footer = () => {
                   <div className="flex flex-col">
                     <h2 className="text-xl md:text-2xl font-bold">
                       <span className="text-orange-400">ANAND</span> 
-                      <span className="text-white"> Youth</span>
+                      <span className="text-white"> YOUTH</span>
                     </h2>
-                    <p className="text-orange-200 text-xs md:text-sm italic">"Connecting Markets. Delivering Excellence."</p>
+                    <p className="text-orange-200 text-xs md:text-sm italic">"Dharmo Rakshati Rakshitah"</p>
                   </div>
                 </div>
 
@@ -230,7 +230,7 @@ const Footer = () => {
 
                     <div className="flex items-center space-x-2">
                       <i className="fas fa-envelope text-orange-400 text-sm" />
-                      <span className="text-gray-300">info@anandimportsexports.com</span>
+                      <span className="text-gray-300">info@anandyouth.com</span>
                     </div>
                   </div>
                 </div>

@@ -459,10 +459,10 @@ const Home = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-6 md:mb-8"
           >
-            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2 md:mb-3">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-orange-500 mb-2 md:mb-3">
               Our Active Initiatives
             </h1>
-            <p className="text-blue-200 text-sm md:text-base">
+            <p className="text-blue-500 text-sm md:text-base">
               Community-driven programs serving people, nature, and the environment with compassion
             </p>
           </motion.div>
@@ -559,7 +559,7 @@ const Home = () => {
               transition={{ delay: 0.6 }}
               className="mt-6 md:mt-8 text-center"
             >
-              <p className="text-white/90 text-sm md:text-base">
+              <p className="text-blue-500 text-sm md:text-base">
                 <span className="text-orange-400 font-semibold">"Dharmo Rakshati Rakshitah"</span> - Building Trust, Delivering Excellence
               </p>
             </motion.div>
@@ -580,7 +580,7 @@ const Home = () => {
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-800 mb-3 md:mb-4">
               Recent Activities & Impact
             </h2>
-            <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed px-2">
+            <p className="text-base md:text-lg text-gray-500 max-w-3xl mx-auto leading-relaxed px-2">
               See how our initiatives are making a real difference in communities
             </p>
           </motion.div>
@@ -1358,7 +1358,7 @@ const Home = () => {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-12 md:py-16 bg-gradient-to-r from-blue-800 to-blue-900 text-white">
+      <section className="py-12 md:py-16 bg-gradient-to-r from-green-600 to-green-500 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
