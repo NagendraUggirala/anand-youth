@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useInView, useAnimation, AnimatePresence } from 'framer-motion';
-import { 
-  FaLeaf, FaTint, FaUtensils, FaHeart, FaTree, FaHandshake, FaDove, 
-  FaUsers, FaUser, FaUserTie, FaUserGraduate, FaUserMd, FaChalkboardTeacher, 
-  FaLaptopCode, FaMoneyBill, FaBox, FaSeedling, FaExclamationTriangle, 
+import {
+  FaLeaf, FaTint, FaUtensils, FaHeart, FaTree, FaHandshake, FaDove,
+  FaUsers, FaUser, FaUserTie, FaUserGraduate, FaUserMd, FaChalkboardTeacher,
+  FaLaptopCode, FaMoneyBill, FaBox, FaSeedling, FaExclamationTriangle,
   FaHardHat, FaTshirt, FaPills, FaPaw, FaLightbulb, FaGlobeAmericas,
   FaFaucet, FaDrumstickBite, FaCross, FaUmbrella
 } from 'react-icons/fa';
@@ -246,9 +246,8 @@ const Home = () => {
         {[...Array(5)].map((_, index) => (
           <span
             key={index}
-            className={`text-lg ${
-              index < rating ? 'text-yellow-400' : 'text-gray-300'
-            }`}
+            className={`text-lg ${index < rating ? 'text-yellow-400' : 'text-gray-300'
+              }`}
           >
             ★
           </span>
@@ -314,7 +313,7 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Carousel Section */}
-      <section 
+      <section
         className="relative h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden"
         onMouseEnter={() => setIsHoveringHero(true)}
         onMouseLeave={() => setIsHoveringHero(false)}
@@ -329,7 +328,7 @@ const Home = () => {
             transition={{ duration: 0.8, ease: "easeInOut" }}
             className="absolute inset-0"
           >
-            <div 
+            <div
               className="absolute inset-0 bg-cover bg-center bg-no-repeat"
               style={{
                 backgroundImage: `url(${heroSlides[currentHeroSlide].image})`
@@ -408,43 +407,85 @@ const Home = () => {
             <button
               key={index}
               onClick={() => setCurrentHeroSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentHeroSlide ? 'bg-orange-500 w-8' : 'bg-white/50 hover:bg-white/70'
-              }`}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentHeroSlide ? 'bg-orange-500 w-8' : 'bg-white/50 hover:bg-white/70'
+                }`}
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}
         </div>
       </section>
 
-      {/* Statistics Section */}
-      <section className="py-12 md:py-16 bg-white">
+      {/* Introduction Section */}
+      <section className="py-12 md:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
-            {[
-              { number: "1000+", label: "Lives Impacted", icon: FaHeart, color: "text-red-500" },
-              { number: "50+", label: "Initiatives", icon: FaLeaf, color: "text-green-500" },
-              { number: "200+", label: "Active Volunteers", icon: FaUsers, color: "text-blue-500" },
-              { number: "10000+", label: "Trees Planted", icon: FaTree, color: "text-emerald-500" }
-            ].map((stat, index) => {
-              const IconComponent = stat.icon;
-              return (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="text-center"
-                >
-                  <div className={`mb-2 ${stat.color} flex justify-center`}>
-                    <IconComponent className="text-4xl md:text-5xl" />
-                  </div>
-                  <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-800 mb-2">{stat.number}</div>
-                  <div className="text-sm md:text-base text-gray-600 font-medium">{stat.label}</div>
-                </motion.div>
-              );
-            })}
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-8 md:mb-12"
+            >
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-800 mb-3 md:mb-4">
+                Welcome to Anand Youth
+              </h2>
+              <div className="w-16 md:w-20 h-1  mx-auto mb-4 md:mb-6"></div>
+              <p className="text-base md:text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed px-2">
+                Anand Youth is a mission-driven community initiative dedicated to serving society with compassion,
+                responsibility, and humanity. We believe that true progress begins with collective effort, and our
+                youth-driven programs are designed to support people, nature, and the environment in meaningful ways.
+                Through a wide range of social welfare activities, we strive to bring positive change to every corner of the community.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="px-2"
+              >
+                <h3 className="text-xl md:text-2xl font-bold text-blue-800 mb-3 md:mb-4">Our Mission</h3>
+                <p className="text-gray-700 mb-3 md:mb-4 leading-relaxed text-sm md:text-base">
+                  "Dharmo Rakshati Rakshitah" - this ancient wisdom forms the bedrock of our operations.
+                  We believe that when you serve society with righteousness and compassion, positive change follows naturally.
+                </p>
+                <p className="text-gray-700 leading-relaxed text-sm md:text-base">
+                  Through our diverse initiatives in environmental care, water relief, food support, clothing distribution,
+                  medical aid, dignified last rites, animal care, and disaster relief, we aim to build a society rooted in
+                  compassion, responsibility, environmental protection, human dignity, and community unity.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="bg-white p-4 md:p-6 rounded-xl shadow-lg mx-2"
+              >
+                <h4 className="text-lg md:text-xl font-semibold text-blue-800 mb-3 md:mb-4">What We Do</h4>
+                <ul className="space-y-2 md:space-y-3">
+                  <li className="flex items-start">
+                    <span className="text-orange-500 mr-2 md:mr-3 mt-1 text-sm">•</span>
+                    <span className="text-gray-700 text-sm md:text-base">Environmental care through plantation drives and green living</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-orange-500 mr-2 md:mr-3 mt-1 text-sm">•</span>
+                    <span className="text-gray-700 text-sm md:text-base">Water relief and hydration support in public spaces</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-orange-500 mr-2 md:mr-3 mt-1 text-sm">•</span>
+                    <span className="text-gray-700 text-sm md:text-base">Food support ensuring no one sleeps hungry</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-orange-500 mr-2 md:mr-3 mt-1 text-sm">•</span>
+                    <span className="text-gray-700 text-sm md:text-base">Clothing, medical aid, and dignified services for all</span>
+                  </li>
+                </ul>
+              </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -475,8 +516,8 @@ const Home = () => {
                   key={card.id}
                   initial={{ opacity: 0, y: 50, scale: 0.9 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
-                  transition={{ 
-                    duration: 0.5, 
+                  transition={{
+                    duration: 0.5,
                     delay: index * 0.1,
                     type: "spring",
                     stiffness: 100
@@ -566,6 +607,39 @@ const Home = () => {
           </div>
         </div>
       </section>
+      {/* Statistics Section */}
+      <section className="py-12 md:py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
+            {[
+              { number: "1000+", label: "Lives Impacted", icon: FaHeart, color: "text-red-500" },
+              { number: "50+", label: "Initiatives", icon: FaLeaf, color: "text-green-500" },
+              { number: "200+", label: "Active Volunteers", icon: FaUsers, color: "text-blue-500" },
+              { number: "10000+", label: "Trees Planted", icon: FaTree, color: "text-emerald-500" }
+            ].map((stat, index) => {
+              const IconComponent = stat.icon;
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="text-center"
+                >
+                  <div className={`mb-2 ${stat.color} flex justify-center`}>
+                    <IconComponent className="text-4xl md:text-5xl" />
+                  </div>
+                  <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-800 mb-2">{stat.number}</div>
+                  <div className="text-sm md:text-base text-gray-600 font-medium">{stat.label}</div>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+
 
       {/* Recent Activities & Impact Section */}
       <section className="py-12 md:py-16 bg-white">
@@ -816,80 +890,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Introduction Section */}
-      <section className="py-12 md:py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-8 md:mb-12"
-            >
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-800 mb-3 md:mb-4">
-                Welcome to Anand Youth
-              </h2>
-              <div className="w-16 md:w-20 h-1  mx-auto mb-4 md:mb-6"></div>
-              <p className="text-base md:text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed px-2">
-                Anand Youth is a mission-driven community initiative dedicated to serving society with compassion, 
-                responsibility, and humanity. We believe that true progress begins with collective effort, and our 
-                youth-driven programs are designed to support people, nature, and the environment in meaningful ways. 
-                Through a wide range of social welfare activities, we strive to bring positive change to every corner of the community.
-              </p>
-            </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-                className="px-2"
-              >
-                <h3 className="text-xl md:text-2xl font-bold text-blue-800 mb-3 md:mb-4">Our Mission</h3>
-                <p className="text-gray-700 mb-3 md:mb-4 leading-relaxed text-sm md:text-base">
-                  "Dharmo Rakshati Rakshitah" - this ancient wisdom forms the bedrock of our operations. 
-                  We believe that when you serve society with righteousness and compassion, positive change follows naturally.
-                </p>
-                <p className="text-gray-700 leading-relaxed text-sm md:text-base">
-                  Through our diverse initiatives in environmental care, water relief, food support, clothing distribution, 
-                  medical aid, dignified last rites, animal care, and disaster relief, we aim to build a society rooted in 
-                  compassion, responsibility, environmental protection, human dignity, and community unity.
-                </p>
-              </motion.div>
-              
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-                className="bg-white p-4 md:p-6 rounded-xl shadow-lg mx-2"
-              >
-                <h4 className="text-lg md:text-xl font-semibold text-blue-800 mb-3 md:mb-4">What We Do</h4>
-                <ul className="space-y-2 md:space-y-3">
-                  <li className="flex items-start">
-                    <span className="text-orange-500 mr-2 md:mr-3 mt-1 text-sm">•</span>
-                    <span className="text-gray-700 text-sm md:text-base">Environmental care through plantation drives and green living</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-orange-500 mr-2 md:mr-3 mt-1 text-sm">•</span>
-                    <span className="text-gray-700 text-sm md:text-base">Water relief and hydration support in public spaces</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-orange-500 mr-2 md:mr-3 mt-1 text-sm">•</span>
-                    <span className="text-gray-700 text-sm md:text-base">Food support ensuring no one sleeps hungry</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-orange-500 mr-2 md:mr-3 mt-1 text-sm">•</span>
-                    <span className="text-gray-700 text-sm md:text-base">Clothing, medical aid, and dignified services for all</span>
-                  </li>
-                </ul>
-              </motion.div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Key Features */}
       <section className="py-12 md:py-16 bg-white">
@@ -960,9 +961,8 @@ const Home = () => {
                   animate="center"
                   exit="exit"
                   transition={{ duration: 0.5, ease: "easeInOut" }}
-                  className={`grid gap-4 md:gap-6 ${
-                    window.innerWidth < 768 ? 'grid-cols-1' : 'grid-cols-3'
-                  }`}
+                  className={`grid gap-4 md:gap-6 ${window.innerWidth < 768 ? 'grid-cols-1' : 'grid-cols-3'
+                    }`}
                 >
                   {currentReviews.map((review) => (
                     <div key={review.id} className="bg-white rounded-xl shadow-lg p-4 md:p-6 hover:shadow-xl transition-all duration-300">
@@ -991,9 +991,8 @@ const Home = () => {
                   <button
                     key={index}
                     onClick={() => setCurrentReviewSet(index)}
-                    className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all duration-300 ${
-                      index === currentReviewSet ? 'bg-orange-500' : 'bg-gray-300'
-                    }`}
+                    className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all duration-300 ${index === currentReviewSet ? 'bg-orange-500' : 'bg-gray-300'
+                      }`}
                   />
                 ))}
               </div>
@@ -1120,8 +1119,8 @@ const Home = () => {
               ANAND YOUTH – OUR INITIATIVES
             </h2>
             <p className="text-base md:text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed px-2">
-              A wide range of welfare initiatives focused on community service, environmental protection, 
-              human dignity, and animal care. Each initiative is driven by compassion and the belief that 
+              A wide range of welfare initiatives focused on community service, environmental protection,
+              human dignity, and animal care. Each initiative is driven by compassion and the belief that
               every small act of kindness can create a big impact.
             </p>
           </motion.div>
@@ -1202,7 +1201,7 @@ const Home = () => {
                   }
                 ]
               },
-            
+
               {
                 id: 6,
                 title: "Animal Safety & Care",
@@ -1242,8 +1241,8 @@ const Home = () => {
                   key={initiative.id}
                   initial={{ opacity: 0, y: 50, scale: 0.9 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                  transition={{ 
-                    duration: 0.6, 
+                  transition={{
+                    duration: 0.6,
                     delay: index * 0.1,
                     type: "spring",
                     stiffness: 100
@@ -1370,18 +1369,18 @@ const Home = () => {
               Ready to Make a Difference?
             </h2>
             <p className="text-lg md:text-xl text-blue-200 mb-6 md:mb-8 max-w-2xl mx-auto leading-relaxed px-2">
-              Join Anand Youth in serving society with compassion and responsibility. Together, we can create 
+              Join Anand Youth in serving society with compassion and responsibility. Together, we can create
               positive change in our community and environment.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
-              <Link 
-                to="/volunteer" 
+              <Link
+                to="/volunteer"
                 className="bg-orange-500 hover:bg-orange-600 text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-bold transition-all duration-300 transform hover:scale-105 text-sm md:text-base"
               >
                 Join as Volunteer
               </Link>
-              <Link 
-                to="/initiatives" 
+              <Link
+                to="/initiatives"
                 className="border border-white text-white hover:bg-white hover:text-blue-800 px-6 md:px-8 py-3 md:py-4 rounded-lg font-bold transition-all duration-300 text-sm md:text-base"
               >
                 Explore Initiatives

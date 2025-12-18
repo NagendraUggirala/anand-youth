@@ -9,7 +9,6 @@ const Footer = () => {
     { path: "/about", label: "About" },
     { path: "/initiatives", label: "Initiatives" },
     { path: "/volunteer", label: "Volunteer" },
-    { path: "/gallery", label: "Gallery" },
     { path: "/contact", label: "Contact" }
   ];
   const openLegalModal = (type) => {

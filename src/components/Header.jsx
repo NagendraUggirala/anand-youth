@@ -17,18 +17,13 @@ const Header = () => {
     
     { path: "/initiatives", label: "Initiatives" },
     { path: "/volunteer", label: "Volunteer" },
-    { path: "/gallery", label: "Gallery" },
     { path: "/contact", label: "Contact" },
     { path: "/about", label: "About" },
   ];
 
   const isActiveLink = (path) => location.pathname === path;
 
-  const handleCTAClick = () => {
-    // Redirect to Join Us page
-    window.location.href = "/join-us";
-    setIsMenuOpen(false);
-  };
+  
 
   return (
     <header
@@ -93,15 +88,7 @@ const Header = () => {
             </ul>
           </nav>
 
-          {/* CTA Button - Desktop */}
-          <div className="hidden lg:block">
-            <button
-              onClick={handleCTAClick}
-              className="cta-btn px-6 py-2.5 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105"
-            >
-              Join Us
-            </button>
-          </div>
+          
 
           {/* Mobile Menu Icon (Hamburger) */}
           <div className="menu-icon lg:hidden">

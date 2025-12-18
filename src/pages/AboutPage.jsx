@@ -18,27 +18,28 @@ const About = () => {
   ];
 
   const values = [
-    {
-      icon: "🤝",
-      title: "Trust & Transparency",
-      description: "Complete legal documentation and honest communication in every transaction"
-    },
-    {
-      icon: "⭐",
-      title: "Quality Excellence",
-      description: "Uncompromised construction standards using premium materials and techniques"
-    },
-    {
-      icon: "⚖️",
-      title: "Vastu Science",
-      description: "Modern architecture harmonized with scientific Vastu principles for balanced living"
-    },
-    {
-      icon: "🌍",
-      title: "Accessible Luxury",
-      description: "Premium living experiences made accessible to everyone without compromise"
-    }
-  ];
+  {
+    icon: "🫂", // Represents community and togetherness
+    title: "Trust & Transparency",
+    description: "Complete transparency and honest communication in every initiative we undertake, ensuring accountability and integrity in serving communities."
+  },
+  {
+    icon: "🌟", // Represents excellence and positive impact
+    title: "Excellence in Community Impact",
+    description: "Delivering high-quality, meaningful programs that create lasting positive change for people, nature, and society."
+  },
+  {
+    icon: "⚖️", // Represents ethics and responsibility
+    title: "Ethical Responsibility",
+    description: "All our actions are guided by ethical principles, compassion, and a commitment to the welfare of every community we serve."
+  },
+  {
+    icon: "🌱", // Represents sustainability and growth
+    title: "Inclusive Growth",
+    description: "Initiatives designed to benefit everyone, promoting social unity, sustainability, and long-term community well-being."
+  }
+];
+
 
   const sectors = [
     {
@@ -105,7 +106,7 @@ const About = () => {
           <div className="absolute -right-24 -bottom-20 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-yellow-400 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse"></div>
         </div>
-        
+
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -125,15 +126,15 @@ const About = () => {
                 <div className="text-2xl sm:text-3xl md:text-5xl font-bold text-yellow-300 mb-4 md:mb-5 font-sans leading-tight">
                   धर्मो रक्षति रक्षितः
                 </div>
-                
+
                 {/* Transliteration */}
                 <div className="text-base sm:text-lg md:text-2xl text-blue-100 italic mb-4 md:mb-5">
                   "Dharmo Rakshati Rakshitah"
                 </div>
-                
+
                 {/* Separator */}
                 <div className="w-16 h-1 bg-gradient-to-r from-yellow-400 to-orange-400 mx-auto rounded-full mb-4 md:mb-5"></div>
-                
+
                 {/* Meaning */}
                 <div className="text-sm sm:text-base md:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed px-2">
                   Where righteousness protects the protector, and ethical practices build lasting legacies.
@@ -151,7 +152,7 @@ const About = () => {
               Our <span className="text-orange-300">Story</span>
             </motion.h1>
 
-          
+
           </motion.div>
         </div>
       </section>
@@ -161,7 +162,7 @@ const About = () => {
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-6xl mx-auto">
             <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-start">
-              
+
               {/* Left: Image card with responsive sizing */}
               <motion.div
                 initial={{ opacity: 0, x: -40 }}
@@ -178,7 +179,7 @@ const About = () => {
                       alt="Founder & Chairman"
                       className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                     />
-                    
+
                     {/* Shine effect on hover */}
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 transform translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
 
@@ -207,10 +208,9 @@ const About = () => {
                   >
                     <div className="bg-gradient-to-r from-blue-50/50 to-orange-50/50 rounded-xl p-4 md:p-6 border-l-4 border-orange-500 shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:border-orange-600 mx-2 sm:mx-0">
                       <p className="text-gray-700 italic text-sm sm:text-base md:text-lg leading-relaxed text-center">
-                        "We transform landscapes into legacies. Every plot we develop is backed by 
-                        complete legal documentation, premium amenities, and a vision for sustainable 
-                        community living. Our ventures aren't just investments; they're foundations 
-                        for generations to come."
+                        We transform compassion into lasting impact. Every initiative we undertake is guided by responsibility, 
+                        transparency, and a vision for sustainable community well-being. Anand Youth’s efforts are not just acts of service
+                         they are foundations of hope, dignity, and positive change for generations to come
                       </p>
                     </div>
                   </motion.div>
@@ -232,23 +232,25 @@ const About = () => {
                   <div className="mt-4 md:mt-6 text-gray-700 space-y-4 w-full">
                     <p className="text-sm sm:text-base md:text-lg leading-relaxed">
                       A visionary leader with an unwavering commitment to excellence, Anand founded
-                      Anand Youth in 1998 with a simple yet powerful vision: to create sustainable
+                      Anand Youth in 1998 with a simple yet powerful vision to create sustainable
                       businesses that transform communities and inspire generations.
                     </p>
                     <p className="text-sm sm:text-base md:text-lg leading-relaxed">
-                      With a background in engineering and an innate understanding of market dynamics,
-                      Mr. Anand has successfully steered the group through economic cycles, expanding
-                      from a single real estate venture to a diversified conglomerate with global presence.
+                      Anand Youth has grown into a trusted,
+                       mission-driven community organization dedicated to serving society with compassion, 
+                       responsibility, and humanity. Rooted in the guiding principle 
+                       “Dharmo Rakshati Rakshitah,” the initiative focuses on youth-powered collective 
+                       action to create meaningful social impact. 
                     </p>
-                    
+
                     {/* Added YOUTH Information */}
                     <div className="bg-blue-50 rounded-lg p-4 md:p-6 mt-4 border-l-4 border-blue-500">
                       <h4 className="font-bold text-blue-800 text-base sm:text-lg md:text-xl mb-2">About Anand Youth</h4>
                       <p className="text-gray-700 text-xs sm:text-sm md:text-base">
-                        Under Anand's leadership, Anand Youth has emerged as a trusted name in plot development, 
-                        transforming raw land into premium residential ventures. With 25+ years of expertise, 
-                        we specialize in creating sustainable, Vastu-compliant plotted communities that offer 
-                        complete legal transparency and exceptional value appreciation.
+                       Under Anand’s leadership, Anand Youth has emerged as a trusted name in plot development,
+                        transforming raw land into premium residential ventures. With over 25 years of expertise,
+                        we specialize in creating sustainable, Vastu-compliant plotted communities that ensure complete 
+                        legal transparency and deliver exceptional value appreciation.
                       </p>
                     </div>
                   </div>
@@ -289,7 +291,7 @@ const About = () => {
                 About Anand Youth
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto px-2 sm:px-4">
-                Transforming raw land into premium residential plots with 25+ years of expertise
+                Transforming communities through service and sustainability, backed by years of collective experience and social commitment.
               </p>
             </motion.div>
 
@@ -299,20 +301,17 @@ const About = () => {
                   <div className="flex flex-col h-full justify-between">
                     <div>
                       <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-800 mb-4 md:mb-6 text-left">
-                        Plot Development Excellence
+                        Community Development Excellence
                       </h3>
                       <div className="space-y-4 text-left">
                         <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed">
                           <span className="font-semibold text-blue-800">
-                            Anand Youth specializes in plotted ventures that offer:
+                          Anand Youth specializes in sustainable community development initiatives.
                           </span>{" "}
-                          Complete legal transparency, premium infrastructure, Vastu-compliant layouts, 
-                          and exceptional value appreciation potential for every investor.
+                          Complete transparency, responsible action, compassionate service, and lasting positive impact for every community we serve.
                         </p>
                         <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed">
-                          Our plotted communities are designed with modern amenities, green spaces, 
-                          and sustainable features that create ideal living environments while ensuring 
-                          maximum returns on investment.
+                          Our community initiatives are thoughtfully designed with compassion, green practices, and sustainable values to create supportive environments that uplift lives and deliver lasting positive impact.
                         </p>
                       </div>
                     </div>
@@ -325,15 +324,13 @@ const About = () => {
                   <div className="flex flex-col h-full justify-between">
                     <div>
                       <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-800 mb-4 md:mb-6 text-left">
-                        Our Evolution in Real Estate
+                        Our Journey in Community Service
                       </h3>
                       <div className="space-y-4 text-left">
                         <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed">
-                          What began with single plot developments has now evolved into large-scale 
-                          residential ventures and townships. Yet, our core principles remain unchanged: 
-                          delivering genuine properties with transparent documentation, creating 
-                          infrastructure with uncompromised quality, and offering plotted solutions 
-                          that remain accessible to all investors.
+                          What began as small acts of service has grown into large-scale community initiatives touching countless lives. 
+                          Yet, our core principles remain unchanged: serving with honesty and transparency, delivering support with uncompromised quality,
+                          and creating inclusive initiatives that remain accessible to all sections of society.
                         </p>
                       </div>
                     </div>
@@ -359,7 +356,7 @@ const About = () => {
               Our Guiding Principles
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto px-2 sm:px-4">
-              The values that define our approach and differentiate us in the market
+              The values that guide our initiatives and set Anand Youth apart in creating meaningful community impact.
             </p>
           </motion.div>
 
@@ -384,9 +381,9 @@ const About = () => {
           </div>
         </div>
       </section>
-      
 
-   
+
+
 
       {/* Future Vision - Mobile Optimized */}
       <section ref={ref3} className="py-12 md:py-20 bg-white">
@@ -399,14 +396,13 @@ const About = () => {
           >
             <motion.div variants={itemVariants}>
               <h2 className="text-2xl md:text-4xl font-bold text-blue-800 mb-4 md:mb-6">
-                Building Tomorrow, Today
+                Serving Today, Securing Tomorrow.
               </h2>
               <div className="w-20 h-1 md:w-24 md:h-1 bg-gradient-to-r from-blue-500 to-orange-500 mx-auto mb-6 md:mb-8 rounded-full"></div>
               <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed mb-6 md:mb-8 px-2 sm:px-4">
-                With expanding ventures in plotted developments, township projects, infrastructure, 
-                and several future-ready sectors, Anand Youth stands for responsible growth, 
-                transparent operations, and a vision to build assets, experiences, and opportunities 
-                that last for generations.
+                With expanding initiatives in community welfare, environmental care, and sustainable development,
+                 Anand Youth stands for responsible action, transparent operations, and a vision to create lasting impact, 
+                 meaningful experiences, and opportunities that benefit generations to come.
               </p>
               <motion.div
                 whileHover={{ scale: 1.05 }}
@@ -437,15 +433,10 @@ const About = () => {
               Ready to Be Part of Our Story?
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-blue-200 mb-6 md:mb-8 max-w-2xl mx-auto px-2 sm:px-4">
-              Discover how Anand Youth's commitment to quality and trust can transform your real estate dreams into reality.
+              Discover how Anand Youth’s commitment to compassion, transparency, and responsible action can transform communities and create lasting positive impact for generations.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
-              <Link
-                to="/projects"
-                className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 sm:px-6 sm:py-2 md:px-8 md:py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:scale-105 text-sm sm:text-base"
-              >
-                Explore Properties
-              </Link>
+              
               <Link
                 to="/contact"
                 className="border-2 border-white text-white hover:bg-white hover:text-blue-800 px-4 py-2 sm:px-6 sm:py-2 md:px-8 md:py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:scale-105 text-sm sm:text-base"
@@ -470,8 +461,8 @@ function EnhancedStatCard({ title, subtitle, delay = 0 }) {
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 0.5, delay }}
       viewport={{ once: true }}
-      whileHover={{ 
-        y: -4, 
+      whileHover={{
+        y: -4,
         scale: 1.05,
         transition: { duration: 0.3 }
       }}
@@ -484,7 +475,7 @@ function EnhancedStatCard({ title, subtitle, delay = 0 }) {
         <div className="text-xs text-gray-400 mt-1 group-hover:text-gray-600 transition-colors duration-300">
           {subtitle}
         </div>
-        
+
         {/* Hover effect background */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-orange-50/50 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
       </div>
