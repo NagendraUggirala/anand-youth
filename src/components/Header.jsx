@@ -41,18 +41,18 @@ const Header = () => {
               {/* Logo Image (if available) */}
               <div className="flex items-center space-x-2">
                 <div className="flex items-center space-x-2">
-              <div className="w-12 h-12 md:w-16 md:h-16 rounded-full border-2 border-orange-200 overflow-hidden shadow-sm group-hover:shadow-md transition-all duration-300">
+              <div className="w-14 h-14 md:w-16 md:h-16 rounded-full border-2 border-orange-200 overflow-hidden shadow-sm group-hover:shadow-md transition-all duration-300">
                 <img
                   src="./images/image.png"
                   alt="Founder"
                   className="w-full h-full object-cover object-top "
                 />
               </div>
-              <img
-                src="./images/Anandhlogo.png"
-                alt="Anand Logo"
-                className="w-8  pl-2 h-10 md:w-10 md:h-12 object-contain"
-              />
+                             <img
+                  src="./images/Anandhlogo.png"
+                  alt="Anand Devocation"
+                  className="w-12 h-12 md:w-14 md:h-14 object-contain"
+                />
             </div>
                 <div>
                   <h1 className="text-xl md:text-2xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
